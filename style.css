@@ -3,16 +3,30 @@ header {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    background-color: #395a5a;
+    background-color: rgb(174, 63, 241, 0.5);
     width: 100%;
     height: 70px;
     font-size: 35px;
     margin-bottom: 10px;
     border-radius: 10px;
+    box-shadow: 4px 4px 8px rgb(184, 97, 243, 0.5);
+    border: 2px solid rgb(251, 126, 255, 0.5);
 }
 
-footer {
-    background-color: #294242;
+.top-image {
+    position: fixed; /* Фиксируем на экране */
+    top: 0;          /* Прижимаем к верху */
+    left: 0;         /* Прижимаем к левому краю */
+    z-index: 9999;   /* Делаем z-index очень высоким */
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 h1 {
@@ -22,44 +36,41 @@ h1 {
 }
 
 body {
-    background-color: #4e7979;
-}
-
-.mainSite {
-    display: block;
-}
-.catalog {
-    display: none;
-}
-.balance {
-    display: none;
-}
-.cabinet {
-    display: none;
+    background-repeat: no-repeat; /* Не повторять картинку */
+    background-position: center; /* Центрировать */
+    background-attachment: fixed; /* Фиксировать фон при прокрутке */
+    background-size: cover;
 }
 
 .button {
     text-align: center;
     color: white;
-    background-color: #5baeae;
-    padding: 3px;
+    background-color: rgb(174, 63, 241, 0.5);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid rgb(251, 126, 255, 0.5);
 }
 
 .button:hover {
-    background-color: #3b7070;
+    background-color: rgb(174, 63, 241, 0.5);
     transform: scale(1.2);
     transition: transform .2s linear;
 
 }
 
 .games {
-    background-color: #395a5a;
+    background-color: rgb(174, 63, 241, 0.5);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
     border-radius: 10px;
+    flex-direction: row;
+    box-shadow: 4px 4px 8px rgb(184, 97, 243, 0.5);
+    border: 2px solid rgb(251, 126, 255, 0.5);
 }
 
 .game:hover {
@@ -70,8 +81,11 @@ body {
 .game {
     padding: 5px;
     margin: 10px;
-    background-color: #1e7575;
+    background-color: rgb(174, 63, 241, 0.5);
     border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgb(251, 126, 255, 0.5);
+    box-shadow: 4px 4px 8px rgb(250, 103, 253, 0.5);
 }
 
 .game > img {
@@ -88,6 +102,10 @@ body {
 
 .game > .price {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
+}
+
+.bpaybalance {
+    width: 20%;
 }

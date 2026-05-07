@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vertex</title>
+    <title>Balance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <img src="backgrounds/television-static.gif" class="top-image" alt="Overlay">
@@ -15,15 +15,9 @@
         <div class="button bcabinet"><a href="cabinet.html">Личный кабинет</a></div>
     </header>
 
-    <main>
-        <h1>Новые игры</h1>
-        <div class="games cardsNewGames"></div>
-
-        <h1>Популярные игры</h1>
-        <div class="games cardsPopularGames"></div>
-
-        <h1>Бесплатные игры</h1>
-        <div class="games cardsFreeGames"></div>
+    <main style="display: flex; align-items: center; flex-direction: column;">
+        <h1 id="balance"></h1>
+        <div class="button bpaybalance">Пополнить баланс</div>
     </main>
 </body>
 <script src="index.js"></script>
