@@ -11,14 +11,8 @@
 //window.onload = backgroundSwitch();
 
 
-let userIdNumber = Math.floor(100000000 + Math.random() * 900000000);
-document.getElementById("userId").innerHTML = 'Ваш ID: ' + userIdNumber.toString();
-
-let balanceUser = 0
-document.getElementById("balance").innerHTML = 'Ваш баланс: ' + balanceUser.toString();
-
-let balance = 0
-let gameId = 0
+import { gameId1 } from "./indexCommonVariables.js";
+let gameId = gameId1;
 
 // НОВЫЕ ИГРЫ
 let cardsNewGames = document.querySelector('.cardsNewGames')
@@ -39,9 +33,9 @@ for (let i = 0; i < picsNewGames.length; i+=1) {
     let price = document.createElement('p')
     price.innerHTML = pricesNewGames[i]
     price.className = 'price'
-    let idCard = document.createElement('p')
-    idCard.innerHTML = gameId
-    idCard.className = 'price'
+//    let cardId = document.createElement('p')
+//    cardId.innerHTML = gameId
+//    cardId.className = 'price'
 
     let game = document.createElement('div')
     game.className = 'game'
@@ -50,9 +44,8 @@ for (let i = 0; i < picsNewGames.length; i+=1) {
     game.appendChild(img)
     game.appendChild(name)
     game.appendChild(price)
-    game.appendChild(idCard)
+//    game.appendChild(cardId)
     game.setAttribute('id', gameId)
-    console.log(game.id);
 
     gameId += 1
     cardsNewGames.appendChild(game)
@@ -77,9 +70,6 @@ for (let i = 0; i < picsPopularGames.length; i+=1) {
     let price = document.createElement('p')
     price.innerHTML = pricesPopularGames[i]
     price.className = 'price'
-    let idCard = document.createElement('p')
-    idCard.innerHTML = gameId
-    idCard.className = 'price'
 
     let game = document.createElement('div')
     game.className = 'game'
@@ -88,7 +78,7 @@ for (let i = 0; i < picsPopularGames.length; i+=1) {
     game.appendChild(img)
     game.appendChild(name)
     game.appendChild(price)
-    game.appendChild(idCard)
+    game.setAttribute('id', gameId)
 
     gameId += 1
     cardsPopularGames.appendChild(game)
@@ -112,9 +102,6 @@ for (let i = 0; i < picsFreeGames.length; i+=1) {
     let price = document.createElement('p')
     price.innerHTML = "Бесплатно"
     price.className = 'price'
-    let idCard = document.createElement('p')
-    idCard.innerHTML = gameId
-    idCard.className = 'price'
 
     let game = document.createElement('div')
     game.className = 'game'
@@ -123,9 +110,8 @@ for (let i = 0; i < picsFreeGames.length; i+=1) {
     game.appendChild(img)
     game.appendChild(name)
     game.appendChild(price)
-    game.appendChild(idCard)
+    game.setAttribute('id', gameId)
 
     gameId += 1
     cardsFreeGames.appendChild(game)
 }
-

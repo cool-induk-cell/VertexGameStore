@@ -92,6 +92,7 @@ body {
     border-radius: 5px;
     width: 150px;
     height: 150px;
+    border: 2px solid rgb(251, 126, 255, 0.5);
 }
 
 .game > .name {
