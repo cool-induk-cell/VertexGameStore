@@ -115,3 +115,15 @@ for (let i = 0; i < picsFreeGames.length; i+=1) {
     gameId += 1
     cardsFreeGames.appendChild(game)
 }
+
+//МОИ ИГРЫ
+//
+//let myGamesCards = []
+//let divMyGames = document.querySelector('.myGames')
+//
+//for (let i = 0; i < myGamesCards.length; i+=1) {
+//    if (i > 0){
+//        myGames.appendChild(game)
+//    }
+//}
+
