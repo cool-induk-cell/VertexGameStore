@@ -10,14 +10,22 @@
     <header>
         <p style="font-size:65px; color: white">Vertex</p>
         <div class="button bmainSite"><a href="main.html">На главную</a></div>
-        <div class="button bmyGames"><a href="myGames.html">Ваши игры</a></div>
         <div class="button bbalance"><a href="balance.html">Баланс</a></div>
         <div class="button bcabinet"><a href="cabinet.html">Личный кабинет</a></div>
     </header>
 
     <main>
-        <h1 id="userId"></h1>
-        <h1 id="balance"></h1>
+        <div class="games">
+            <div class="left">
+                <img id="avatarUser" style="width:150px; height:200px; box-shadow: 4px 4px 8px rgb(184, 97, 243, 0.5); border: 2px solid rgb(251, 126, 255, 0.5); border-radius: 5px" alt="UserAvatar">
+                <h1 id="userName"></h1>
+                <div class="button bChange">Редактировать профиль</div>
+            </div>
+            <div class="right">
+                <h1 id="userId"></h1>
+                <h1 id="balance"></h1>
+            </div>
+        </div>
     </main>
 <script type="module" src="indexCabinet.js"></script>
 </body>

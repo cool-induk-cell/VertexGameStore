@@ -10,16 +10,21 @@
 //}
 //window.onload = backgroundSwitch();
 
+let gameId = 0
 
-import { gameId1 } from "./indexCommonVariables.js";
-let gameId = gameId1;
+setInterval(function(){
+    document.cookie = 'userBalance=0; userName=Пользователь; userId=0; max-age=100000;'
+}, 1000)
+
+
 
 // НОВЫЕ ИГРЫ
 let cardsNewGames = document.querySelector('.cardsNewGames')
 
-let picsNewGames = ['images/hytale.png', 'images/hozy.png']
-let namesNewGames = ['Hytale', 'Hozy']
-let pricesNewGames = ['499 р.', '199 р.']
+let picsNewGames = ['images/hytale.png', 'images/hozy.png', 'images/fh6.png', 'images/drg.png',
+    'images/pawbay.png']
+let namesNewGames = ['Hytale', 'Hozy', 'Forza Horizon 6', 'Deep Rock Galactic', 'Pawbay']
+let pricesNewGames = ['499 р.', '199 р.', '2499 р.', '799 р.', "Скоро выйдет"]
 
 for (let i = 0; i < picsNewGames.length; i+=1) {
     let img = document.createElement('img');
@@ -33,9 +38,6 @@ for (let i = 0; i < picsNewGames.length; i+=1) {
     let price = document.createElement('p')
     price.innerHTML = pricesNewGames[i]
     price.className = 'price'
-//    let cardId = document.createElement('p')
-//    cardId.innerHTML = gameId
-//    cardId.className = 'price'
 
     let game = document.createElement('div')
     game.className = 'game'
@@ -44,7 +46,6 @@ for (let i = 0; i < picsNewGames.length; i+=1) {
     game.appendChild(img)
     game.appendChild(name)
     game.appendChild(price)
-//    game.appendChild(cardId)
     game.setAttribute('id', gameId)
 
     gameId += 1
@@ -54,9 +55,10 @@ for (let i = 0; i < picsNewGames.length; i+=1) {
 // ПОПУЛЯРНЫЕ ИГРЫ
 let cardsPopularGames = document.querySelector('.cardsPopularGames')
 
-let picsPopularGames = ['images/minecraft.png', 'images/rust.png']
-let namesPopularGames = ['Minecraft', 'Rust']
-let pricesPopularGames = ['1599 р.', '799 р.']
+let picsPopularGames = ['images/minecraft.png', 'images/rust.png', 'images/helletloose.png',
+    'images/limbo.png', 'images/pfobia.png']
+let namesPopularGames = ['Minecraft', 'Rust', 'Hell Let Loose', 'Limbo', 'Phasmophobia']
+let pricesPopularGames = ['1599 р.', '799 р.', '1999 р.', '59 р.', '399 р.']
 
 for (let i = 0; i < picsPopularGames.length; i+=1) {
     let img = document.createElement('img');
@@ -74,7 +76,6 @@ for (let i = 0; i < picsPopularGames.length; i+=1) {
     let game = document.createElement('div')
     game.className = 'game'
 
-
     game.appendChild(img)
     game.appendChild(name)
     game.appendChild(price)
@@ -87,8 +88,11 @@ for (let i = 0; i < picsPopularGames.length; i+=1) {
 // БЕСПЛАТНЫЕ ИГРЫ
 let cardsFreeGames = document.querySelector('.cardsFreeGames')
 
-let picsFreeGames = ['images/apexlegends.png', 'images/warthunder.png']
-let namesFreeGames = ['Apex Legends', 'War Thunder']
+let picsFreeGames = ['images/apexlegends.png', 'images/warthunder.png', 'images/roblox.png', 'images/rf4.png',
+    'images/stalcraftx.png', 'images/supermarkettogether.png', 'images/warface.png', 'images/r2.png',
+    'images/ktw.png']
+let namesFreeGames = ['Apex Legends', 'War Thunder', 'Roblox', 'Russian Fishing 4', 'Stalcraft X',
+    'Supermarket Together', 'Warface', 'Redmatch 2', 'Кризис третий путь']
 
 for (let i = 0; i < picsFreeGames.length; i+=1) {
     let img = document.createElement('img');
@@ -115,15 +119,4 @@ for (let i = 0; i < picsFreeGames.length; i+=1) {
     gameId += 1
     cardsFreeGames.appendChild(game)
 }
-
-//МОИ ИГРЫ
-//
-//let myGamesCards = []
-//let divMyGames = document.querySelector('.myGames')
-//
-//for (let i = 0; i < myGamesCards.length; i+=1) {
-//    if (i > 0){
-//        myGames.appendChild(game)
-//    }
-//}
 
