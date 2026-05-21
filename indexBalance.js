@@ -1,14 +1,15 @@
-function getCookies(){
-    let cookie = document.cookie.split('; ')
-    for (i = 0; i < cookie.length; i++){
-        let c = cookie[i].split('=')
-        if (c[0] == 'userBalance'){
-            return c[1]
-        }
-    }
-}
+//function getCookies(){
+//    let cookie = document.cookie.split('; ')
+//    for (i = 0; i < cookie.length; i++){
+//        let c = cookie[i].split('=')
+//        if (c[0] == 'userBalance'){
+//            return c[1]
+//        }
+//    }
+//}
 
-balanceUser = getCookies()
+//balanceUser = getCookies()
+let balanceUser = 0
 
 document.getElementById('balance').innerHTML = 'Ваш баланс: ' + balanceUser.toString() + '₽';
 
